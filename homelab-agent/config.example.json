@@ -1,0 +1,31 @@
+{
+  "ingest_url": "https://www.reydelgutierrez.com/api/ingest",
+
+  "proxmox": {
+    "url": "https://10.0.0.10:8006",
+    "token_id": "dashboard@pve!site",
+    "verify_tls": false
+  },
+
+  "network": [
+    { "name": "Router / firewall", "ip": "10.0.0.1", "show_ip": true },
+    { "name": "Core switch", "ip": "10.0.0.2" },
+    { "name": "Wi-Fi access point", "ip": "10.0.0.3" },
+    { "name": "Internet (1.1.1.1)", "ip": "1.1.1.1" }
+  ],
+
+  "bms": {
+    "source": "file",
+    "home_assistant": { "url": "http://10.0.0.20:8123" },
+    "file": "/opt/sensreys/export/zones.json",
+    "zones": [
+      { "id": "living",  "name": "Living Room", "tag": "LIV-ZN", "setpoint": 74, "temp_entity": "sensor.living_room_temperature", "rh_entity": "sensor.living_room_humidity" },
+      { "id": "kitchen", "name": "Kitchen",     "tag": "KIT-ZN", "setpoint": 74, "temp_entity": "sensor.kitchen_temperature",     "rh_entity": "sensor.kitchen_humidity" },
+      { "id": "office",  "name": "Office",      "tag": "OFF-ZN", "setpoint": 72, "temp_entity": "sensor.office_temperature",      "rh_entity": "sensor.office_humidity" },
+      { "id": "bedroom", "name": "Bedroom",     "tag": "BED-ZN", "setpoint": 71, "temp_entity": "sensor.bedroom_temperature",     "rh_entity": "sensor.bedroom_humidity" },
+      { "id": "rack",    "name": "Rack Closet", "tag": "RAC-ZN", "setpoint": 78, "high_limit": 80, "temp_entity": "sensor.rack_temperature", "rh_entity": "sensor.rack_humidity" },
+      { "id": "hall",    "name": "Hallway",     "tag": "HAL-ZN", "setpoint": 74, "temp_entity": "sensor.hallway_temperature" },
+      { "id": "outdoor", "name": "Outdoor",     "tag": "OA",     "temp_entity": "sensor.outdoor_temperature", "rh_entity": "sensor.outdoor_humidity" }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+homelab-agent/config.json
+homelab-agent/secrets.env
+homelab-agent/history.json
+__pycache__/
