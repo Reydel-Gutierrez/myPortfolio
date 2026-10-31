@@ -1,0 +1,17 @@
+name = "reydel-site-api"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+routes = [
+  { pattern = "www.reydelgutierrez.com/api/*", zone_name = "reydelgutierrez.com" }
+]
+
+[[kv_namespaces]]
+binding = "STATUS"
+id = "REPLACE_WITH_KV_NAMESPACE_ID"   # from: npx wrangler kv namespace create STATUS
+
+[vars]
+ACCESS_TEAM_DOMAIN = "REPLACE.cloudflareaccess.com"
+ACCESS_AUD = "REPLACE_WITH_ACCESS_AUD_TAG"
+
+# Secret (not stored here): npx wrangler secret put INGEST_TOKEN

@@ -1,0 +1,10 @@
+[Unit]
+Description=Run homelab-agent every 5 minutes (stays well inside Cloudflare KV's free write limit)
+
+[Timer]
+OnBootSec=30s
+OnUnitActiveSec=300s
+AccuracySec=5s
+
+[Install]
+WantedBy=timers.target
