@@ -20,9 +20,9 @@ window.SITE = {
   person: {
     name: "Reydel Gutierrez",
     location: "Miami, FL",
-    headline: "Building automation, from the sensor to the server.",
+    headline: "Automation & Systems Integration",
     lede:
-      "I'm a controls technician with a computer science degree. I commission, troubleshoot and program building automation systems in the field, and I bring the networking and code to connect them to IT. Give me any BMS and I'll learn the front end fast, because what sits underneath is the same: BACnet, sequences, and a network."
+      "Computer Science graduate from Florida International University with six years of experience across building automation, production IT and networking. I integrate and support automated systems end to end, from field controllers and the networks that connect them to the software and data platforms above them."
   },
 
   stats: [
